@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ts_connect_app/presentation/login/login_activity.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,16 +10,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-            title: const Text("TenSing Connect")
-        ),
-        body: const Center(
-          child:
-          Text("test"),
-        ),
-      ),
+    return const MaterialApp(
+      home: LoginActivity()
     );
   }
 }
