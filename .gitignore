@@ -224,3 +224,5 @@ app.*.symbols
 
 # custom
 assets/logo
+/android/app/release/app-release.aab
+/android/private_key.pepk
