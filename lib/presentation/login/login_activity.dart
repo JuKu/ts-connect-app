@@ -38,7 +38,7 @@ class LoginActivity extends StatelessWidget {
               radius: 60,
               backgroundImage: AssetImage("assets/logo/Logo_512.png"),
             ),*/
-              LogoWidget(),
+              LogoWidget(width: 150, height: 150),
               SizedBox(height: 40),
               LoginFormWidget()
             ],
