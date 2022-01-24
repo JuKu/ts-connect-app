@@ -27,7 +27,7 @@ class LoginFormWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               //const Text("Benutzername:", style: TextStyle(fontSize: 22), ),
-              //const SizedBox(height: 20),
+              const SizedBox(height: 20),
               const TextField(obscureText: false, decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Benutzername',
@@ -38,7 +38,7 @@ class LoginFormWidget extends StatelessWidget {
                 border: OutlineInputBorder(),
                 labelText: 'Passwort',
               )),
-              const SizedBox(height: 20),
+              const SizedBox(height: 40),
               ClipRRect(
                 borderRadius: BorderRadius.circular(4),
                 //borderRadius: const BorderRadius.all(2),
