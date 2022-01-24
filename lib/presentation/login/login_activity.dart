@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ts_connect_app/presentation/login/widgets/login_form.dart';
+import 'package:ts_connect_app/presentation/shared/logo.dart';
 
 /**
  * the login activity, where the user can login or register.
@@ -29,32 +30,25 @@ class LoginActivity extends StatelessWidget {
           ],
         ),
         body: Column(
-          children: [
-            const SizedBox(height: 40),
+          children: const [
+            SizedBox(height: 40),
             /*const CircleAvatar(
               radius: 60,
               backgroundImage: AssetImage("assets/logo/Logo_512.png"),
             ),*/
-            SizedBox(
-                width: 150,
-                height: 150,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Image.asset("assets/logo/Logo_512.png"),
-                  //fit: BoxFit.cover
-                )),
-            const SizedBox(height: 40),
-            const LoginFormWidget()
+            LogoWidget(),
+            SizedBox(height: 40),
+            LoginFormWidget()
           ],
         ),
         /*const Center(
           child: Text("test"),
         ),*/
         backgroundColor: Theme.of(context).primaryColor,
-        bottomNavigationBar: SizedBox(
+        bottomNavigationBar: const SizedBox(
           height: 50.0,
           //color: Colors.white70,
-          child: const Center(
+          child: Center(
               child: Text(
             "Copyright ©2022, All Rights Reserved.\nPowered by JuKuSoft\n",
             style: TextStyle(
