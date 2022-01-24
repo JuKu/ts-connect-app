@@ -46,6 +46,7 @@ class LoginFormWidget extends StatelessWidget {
                   children: [
                     Positioned.fill(
                       child: Container(
+                        width: 300,
                         decoration: const BoxDecoration(
                           gradient: LinearGradient(
                             colors: <Color>[
@@ -59,7 +60,7 @@ class LoginFormWidget extends StatelessWidget {
                     ),
                     TextButton(
                       style: TextButton.styleFrom(
-                        padding: const EdgeInsets.all(16.0),
+                        padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 80.0),
                         primary: Colors.white,
                         textStyle: const TextStyle(fontSize: 20),
                       ),
