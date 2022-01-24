@@ -29,17 +29,19 @@ class LoginActivity extends StatelessWidget {
             ),
           ],
         ),
-        body: Column(
-          children: const [
-            SizedBox(height: 40),
-            /*const CircleAvatar(
+        body: SingleChildScrollView(
+          child: Column(
+            children: const [
+              SizedBox(height: 40),
+              /*const CircleAvatar(
               radius: 60,
               backgroundImage: AssetImage("assets/logo/Logo_512.png"),
             ),*/
-            LogoWidget(),
-            SizedBox(height: 40),
-            LoginFormWidget()
-          ],
+              LogoWidget(),
+              SizedBox(height: 40),
+              LoginFormWidget()
+            ],
+          ),
         ),
         /*const Center(
           child: Text("test"),
