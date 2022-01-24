@@ -30,6 +30,7 @@ class LoginActivity extends StatelessWidget {
           ],
         ),
         body: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
           child: Column(
             children: const [
               SizedBox(height: 40),
