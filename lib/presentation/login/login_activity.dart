@@ -32,6 +32,13 @@ class LoginActivity extends StatelessWidget {
           child: Text("test"),
         ),*/
         backgroundColor: Theme.of(context).primaryColor,
+        bottomNavigationBar: Container(
+          height: 50.0,
+          //color: Colors.white70,
+          child: const Center(
+            child: Text("Copyright ©2022, All Rights Reserved.\nPowered by JuKuSoft", style: TextStyle(fontWeight:FontWeight.w300, fontSize: 12.0, color: /*Color(0xFF162A49)*/Colors.white60),)
+          ),
+        ),
       ),
     );
   }
