@@ -39,6 +39,11 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+
+        print("minSdkVersion: " + minSdkVersion)
+
+        //see also: https://firebase.flutter.dev/docs/manual-installation/android
+        multiDexEnabled true
     }
 
     signingConfigs {
