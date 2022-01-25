@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ts_connect_app/presentation/login/login_activity.dart';
+import 'package:ts_connect_app/presentation/pages/settings/before_login/global_settings.dart';
+import 'package:ts_connect_app/presentation/root/rootwidget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,10 +12,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: LoginActivity(),
+    return MaterialApp(
+      home: const LoginActivity(),
       /*debugShowCheckedModeBanner: false,
       debugShowMaterialGrid: false,*/
+      routes: <String, WidgetBuilder>{
+        "/app/home" : (BuildContext context) => const RootWidget(),
+        "/settings" : (BuildContext context) => const GlobalSettingsWidget(),
+      },
     );
   }
 }
