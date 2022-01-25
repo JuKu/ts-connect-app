@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ts_connect_app/presentation/login/widgets/login_form.dart';
+import 'package:ts_connect_app/presentation/pages/settings/before_login/global_settings.dart';
 import 'package:ts_connect_app/presentation/shared/logo.dart';
 
 /**
@@ -24,7 +25,9 @@ class LoginActivity extends StatelessWidget {
               icon: const Icon(Icons.call),
             ),*/
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const GlobalSettingsWidget()));
+              },
               icon: const Icon(Icons.more_vert),
             ),
           ],
