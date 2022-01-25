@@ -47,7 +47,7 @@ class _State extends State<RootWidget> {
       body: IndexedStack(
         index: _currentIndex,
         children: [
-          //
+          //TODO: add pages here
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
