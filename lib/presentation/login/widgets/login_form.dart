@@ -69,7 +69,7 @@ class LoginFormWidget extends StatelessWidget {
                         //simulate login
 
                         //TODO: replace later with real login
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => const RootWidget()));
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const RootWidget()));
                       },
                       child: const Text('Anmelden'),
                     ),
