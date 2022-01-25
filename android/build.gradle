@@ -6,6 +6,10 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.0'
+
+        //crashlytics, see also: https://firebase.flutter.dev/docs/crashlytics/overview/
+        classpath 'com.google.gms:google-services:4.3.5'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.7.1'
     }
 }
 
