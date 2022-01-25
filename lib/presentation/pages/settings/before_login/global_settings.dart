@@ -14,7 +14,7 @@ class _GlobalSettingsWidgetState extends State<GlobalSettingsWidget> {
       appBar: AppBar(
         title: const Text("Einstellungen"),
         centerTitle: true,
-        leading: const Icon(Icons.settings),
+        //leading: const Icon(Icons.settings),
         actions: const [
           /*IconButton(
               onPressed: () {},
