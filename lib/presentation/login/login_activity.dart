@@ -3,11 +3,11 @@ import 'package:ts_connect_app/presentation/login/widgets/login_form.dart';
 import 'package:ts_connect_app/presentation/pages/settings/before_login/global_settings.dart';
 import 'package:ts_connect_app/presentation/shared/logo.dart';
 
-/**
- * the login activity, where the user can login or register.
- *
- * @author Justin Kuenzel
- */
+///
+///the login activity, where the user can login or register.
+///
+///@author Justin Kuenzel
+///
 class LoginActivity extends StatelessWidget {
   const LoginActivity({Key? key}) : super(key: key);
 
@@ -26,7 +26,10 @@ class LoginActivity extends StatelessWidget {
             ),*/
             IconButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const GlobalSettingsWidget()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const GlobalSettingsWidget()));
               },
               icon: const Icon(Icons.more_vert),
             ),

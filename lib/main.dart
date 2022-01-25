@@ -1,10 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 import 'package:ts_connect_app/presentation/login/login_activity.dart';
 import 'package:ts_connect_app/presentation/pages/settings/before_login/global_settings.dart';
 import 'package:ts_connect_app/presentation/root/rootwidget.dart';
+import 'package:ts_connect_app/presentation/shared/server_settings.dart';
 
-void main() {
+Future<void> main() async {
+  //Settings.init();
+  await Settings.init(cacheProvider: SharePreferenceCache());
+
+  //initialize settings
+  setSettingStringIfAbsent("server-url", ServerSettings.defaultServer);
+  setSettingBoolIfAbsent("crashlytics-enabled", false);
+  setSettingBoolIfAbsent("developer-options", false);
+
   runApp(const MyApp());
+}
+
+void setSettingBoolIfAbsent(String key, bool value) {
+  if (Settings.containsKey(key) != true) {
+    Settings.setValue(key, value);
+  }
+}
+
+void setSettingStringIfAbsent(String key, String value) {
+  if (Settings.containsKey(key) != true) {
+    Settings.setValue(key, value);
+  }
 }
 
 class MyApp extends StatelessWidget {
