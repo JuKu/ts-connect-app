@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ts_connect_app/presentation/root/rootwidget.dart';
 
 class LoginFormWidget extends StatelessWidget {
   const LoginFormWidget({Key? key}) : super(key: key);
@@ -64,7 +65,12 @@ class LoginFormWidget extends StatelessWidget {
                         primary: Colors.white,
                         textStyle: const TextStyle(fontSize: 20),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        //simulate login
+
+                        //TODO: replace later with real login
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => RootWidget()));
+                      },
                       child: const Text('Anmelden'),
                     ),
                   ],
