@@ -40,6 +40,8 @@ dependencies:
   flutter_platform_widgets: ^1.12.1
   firebase_crashlytics: ^2.4.5
   flutter_settings_screens: ^0.3.2-null-safety
+  provider: ^6.0.2
+  webview_flutter: ^3.0.0
   #footer: ^0.0.3
 
   #settings_ui: ^2.0.1

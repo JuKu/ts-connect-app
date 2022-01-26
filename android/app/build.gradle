@@ -35,7 +35,7 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.jukusoft.ts_connect_app"
-        minSdkVersion flutter.minSdkVersion
+        minSdkVersion flutter.minSdkVersion >= 19 ? flutter.minSdkVersion : 19;
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName

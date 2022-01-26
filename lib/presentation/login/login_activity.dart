@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ts_connect_app/presentation/login/widgets/login_form.dart';
 import 'package:ts_connect_app/presentation/pages/settings/before_login/global_settings.dart';
+import 'package:ts_connect_app/presentation/pages/settings/before_login/privacy_data.dart';
 import 'package:ts_connect_app/presentation/shared/logo.dart';
 
 ///
@@ -24,7 +25,7 @@ class LoginActivity extends StatelessWidget {
               onPressed: () {},
               icon: const Icon(Icons.call),
             ),*/
-            IconButton(
+            /*IconButton(
               onPressed: () {
                 Navigator.push(
                     context,
@@ -32,7 +33,39 @@ class LoginActivity extends StatelessWidget {
                         builder: (context) => const GlobalSettingsWidget()));
               },
               icon: const Icon(Icons.more_vert),
-            ),
+            ),*/
+            PopupMenuButton(
+                elevation: 40,
+                onSelected: (value) {
+                  switch (value) {
+                    case 1:
+                      //settings page
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const GlobalSettingsWidget()));
+                      break;
+                    case 2:
+                      //privacy page
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                              const PrivacyDataActivity()));
+                      break;
+                  }
+                },
+                itemBuilder: (context) => [
+                      const PopupMenuItem(
+                        child: Text("Einstellungen"),
+                        value: 1,
+                      ),
+                      const PopupMenuItem(
+                        child: Text("Datenschutz"),
+                        value: 2,
+                      )
+                    ])
           ],
         ),
         body: SingleChildScrollView(
