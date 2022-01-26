@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ts_connect_app/presentation/pages/messages/messages.dart';
 import 'package:ts_connect_app/presentation/pages/settings/before_login/global_settings.dart';
+import 'package:ts_connect_app/presentation/pages/wip/wip.dart';
 
 class RootWidget extends StatefulWidget {
   const RootWidget({Key? key}) : super(key: key);
@@ -46,7 +48,12 @@ class _State extends State<RootWidget> {
       ),
       body: IndexedStack(
         index: _currentIndex,
-        children: [
+        children: const [
+          WIPWidget(),
+          MessagesWidget(),
+          WIPWidget(),
+          WIPWidget(),
+          WIPWidget(),
           //TODO: add pages here
         ],
       ),
