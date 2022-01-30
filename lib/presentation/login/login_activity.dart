@@ -10,7 +10,10 @@ import 'package:ts_connect_app/presentation/shared/logo.dart';
 ///@author Justin Kuenzel
 ///
 class LoginActivity extends StatelessWidget {
-  const LoginActivity({Key? key}) : super(key: key);
+  LoginActivity({Key? key}) : super(key: key);
+
+  final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

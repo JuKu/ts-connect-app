@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const LoginActivity(),
+      home: LoginActivity(),
       /*debugShowCheckedModeBanner: false,
       debugShowMaterialGrid: false,*/
       routes: <String, WidgetBuilder>{
