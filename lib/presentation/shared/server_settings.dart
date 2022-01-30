@@ -4,8 +4,8 @@ import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 
 class ServerSettings {
   static Map<String, String> servers = const {
-    "https://ts-connect.jukusoft.com": "Main",
-    "http://127.0.0.1:3000": "Testing"
+    "https://ts-connect.jukusoft.com/": "Main",
+    "http://127.0.0.1:3000/": "Testing"
   };
 
   static String defaultServer = servers.entries.first.key;
@@ -15,7 +15,7 @@ class ServerSettings {
   }
 
   static String getDataPrivacyUrl() {
-    return "https://flutter.dev";
+    return getServerUrl() + "data-privacy.html";
   }
 
 }
