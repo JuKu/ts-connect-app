@@ -10,10 +10,7 @@ import 'package:ts_connect_app/presentation/shared/logo.dart';
 ///@author Justin Kuenzel
 ///
 class LoginActivity extends StatelessWidget {
-  LoginActivity({Key? key}) : super(key: key);
-
-  final TextEditingController _usernameController = TextEditingController();
-  final TextEditingController _passwordController = TextEditingController();
+  const LoginActivity({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -74,14 +71,14 @@ class LoginActivity extends StatelessWidget {
         body: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Column(
-            children: const [
-              SizedBox(height: 40),
+            children: [
+              const SizedBox(height: 40),
               /*const CircleAvatar(
               radius: 60,
               backgroundImage: AssetImage("assets/logo/Logo_512.png"),
             ),*/
-              LogoWidget(width: 150, height: 150),
-              SizedBox(height: 40),
+              const LogoWidget(width: 150, height: 150),
+              const SizedBox(height: 40),
               LoginFormWidget()
             ],
           ),

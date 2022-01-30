@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:ts_connect_app/presentation/root/rootwidget.dart';
 
 class LoginFormWidget extends StatelessWidget {
-  const LoginFormWidget({Key? key}) : super(key: key);
+  LoginFormWidget({Key? key}) : super(key: key);
+
+  final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -29,13 +32,17 @@ class LoginFormWidget extends StatelessWidget {
             children: [
               //const Text("Benutzername:", style: TextStyle(fontSize: 22), ),
               const SizedBox(height: 20),
-              const TextField(obscureText: false, decoration: InputDecoration(
-                border: OutlineInputBorder(),
+              TextField(
+                controller: _usernameController,
+                  obscureText: false, decoration: const InputDecoration(
+                border: const OutlineInputBorder(),
                 labelText: 'Benutzername',
               )),
               const SizedBox(height: 20),
               //const Text("Passwort:", style: TextStyle(fontSize: 22), ),
-              const TextField(obscureText: true, decoration: InputDecoration(
+              TextField(
+                controller: _passwordController,
+                  obscureText: true, decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Passwort',
               )),
