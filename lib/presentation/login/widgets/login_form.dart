@@ -35,7 +35,7 @@ class LoginFormWidget extends StatelessWidget {
               TextField(
                 controller: _usernameController,
                   obscureText: false, decoration: const InputDecoration(
-                border: const OutlineInputBorder(),
+                border: OutlineInputBorder(),
                 labelText: 'Benutzername',
               )),
               const SizedBox(height: 20),

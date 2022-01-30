@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 import 'package:ts_connect_app/presentation/login/login_activity.dart';
 import 'package:ts_connect_app/presentation/pages/settings/before_login/global_settings.dart';
 import 'package:ts_connect_app/presentation/root/rootwidget.dart';
 import 'package:ts_connect_app/presentation/shared/server_settings.dart';
+
+const storage = FlutterSecureStorage();
 
 Future<void> main() async {
   //Settings.init();
