@@ -5,10 +5,22 @@ import 'package:ts_connect_app/presentation/login/login_activity.dart';
 import 'package:ts_connect_app/presentation/pages/settings/before_login/global_settings.dart';
 import 'package:ts_connect_app/presentation/root/rootwidget.dart';
 import 'package:ts_connect_app/presentation/shared/server_settings.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 
 const storage = FlutterSecureStorage();
 
 Future<void> main() async {
+  //initialize firebase
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  //initialize firebase cloud messaging
+  FirebaseMessaging messaging = FirebaseMessaging.instance;
+
   //Settings.init();
   await Settings.init(cacheProvider: SharePreferenceCache());
 
