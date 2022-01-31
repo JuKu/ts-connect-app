@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ts_connect_app/presentation/login/widgets/login_form.dart';
 import 'package:ts_connect_app/presentation/pages/settings/before_login/global_settings.dart';
+import 'package:ts_connect_app/presentation/pages/settings/before_login/info_page.dart';
 import 'package:ts_connect_app/presentation/pages/settings/before_login/privacy_data.dart';
 import 'package:ts_connect_app/presentation/shared/logo.dart';
 
@@ -52,7 +53,15 @@ class LoginActivity extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
-                              const PrivacyDataActivity()));
+                                  const PrivacyDataActivity()));
+                      break;
+                    case 3:
+                      //info page
+                      Navigator.push(
+                        context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                              const InfoActivity()));
                       break;
                   }
                 },
@@ -64,6 +73,10 @@ class LoginActivity extends StatelessWidget {
                       const PopupMenuItem(
                         child: Text("Datenschutz"),
                         value: 2,
+                      ),
+                      const PopupMenuItem(
+                        child: Text("Info"),
+                        value: 3,
                       )
                     ])
           ],
