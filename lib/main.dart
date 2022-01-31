@@ -20,6 +20,7 @@ Future<void> main() async {
 
   //initialize firebase cloud messaging
   FirebaseMessaging messaging = FirebaseMessaging.instance;
+  messaging.subscribeToTopic("all");
 
   //Settings.init();
   await Settings.init(cacheProvider: SharePreferenceCache());
