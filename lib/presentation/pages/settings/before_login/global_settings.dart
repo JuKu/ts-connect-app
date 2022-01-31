@@ -78,12 +78,12 @@ class _GlobalSettingsWidgetState extends State<GlobalSettingsWidget> {
             if (enabled)
               {
                 //subscribe to developer dev topics to get developer notifications
-                FirebaseMessaging.instance.subscribeToTopic("all-dev")
+                FirebaseMessaging.instance.subscribeToTopic("all-devs")
               }
             else
               {
                 //subscribe to developer dev topics to get developer notifications
-                FirebaseMessaging.instance.unsubscribeFromTopic("all-dev")
+                FirebaseMessaging.instance.unsubscribeFromTopic("all-devs")
               }
           },
         ),
