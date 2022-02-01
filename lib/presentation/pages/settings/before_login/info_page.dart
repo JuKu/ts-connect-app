@@ -1,3 +1,7 @@
+import 'dart:developer';
+import 'dart:io';
+
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
@@ -17,10 +21,24 @@ class _InfoActivityState extends State<InfoActivity> {
     buildSignature: 'Unknown',
   );
 
+  late String _firebaseRegisterToken;
+
   @override
   void initState() {
     super.initState();
     _initPackageInfo();
+
+    if (Platform.isIOS) iOSPermission();
+    FirebaseMessaging.instance.getToken().then((String? value) {
+      setState(() => {_firebaseRegisterToken = value!});
+      log("firebase registration token: " + value!);
+    });
+  }
+
+  void iOSPermission() {
+    FirebaseMessaging.instance
+        .requestPermission()
+        .then((value) => {setState(() => {})});
   }
 
   Future<void> _initPackageInfo() async {
@@ -48,25 +66,26 @@ class _InfoActivityState extends State<InfoActivity> {
         //see also: https://pub.dev/packages/webview_flutter/example
         body: Padding(
           padding: const EdgeInsets.all(20),
-          child: Column(
-              children: [
-                const Text("App Information", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
-                const SizedBox(
-                  height: 20,
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    _infoTile('App name', _packageInfo.appName),
-                    _infoTile('Package name', _packageInfo.packageName),
-                    _infoTile('App version', _packageInfo.version),
-                    _infoTile('Build number', _packageInfo.buildNumber),
-                    _infoTile('Build signature', _packageInfo.buildSignature),
-                  ],
-                ),
-              ]
-          ),
-        )
-    );
+          child: Column(children: [
+            const Text(
+              "App Information",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                _infoTile('App name', _packageInfo.appName),
+                _infoTile('Package name', _packageInfo.packageName),
+                _infoTile('App version', _packageInfo.version),
+                _infoTile('Build number', _packageInfo.buildNumber),
+                _infoTile('Build signature', _packageInfo.buildSignature),
+                _infoTile('Firebase Messaging Token', _firebaseRegisterToken),
+              ],
+            ),
+          ]),
+        ));
   }
 }
