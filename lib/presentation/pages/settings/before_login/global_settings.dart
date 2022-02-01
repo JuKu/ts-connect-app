@@ -13,27 +13,6 @@ class GlobalSettingsWidget extends StatefulWidget {
 class _GlobalSettingsWidgetState extends State<GlobalSettingsWidget> {
   @override
   Widget build(BuildContext context) {
-    /*return Scaffold(
-      appBar: AppBar(
-        title: const Text("Einstellungen"),
-        centerTitle: true,
-        //leading: const Icon(Icons.settings),
-        actions: const [
-          /*IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.call),
-            ),*/
-          /*IconButton(
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const GlobalSettingsWidget()));
-            },
-            icon: const Icon(Icons.more_vert),
-          ),*/
-        ],
-      ),
-      body: const Placeholder()
-    );*/
-
     //see also: https://pub.dev/packages/flutter_settings_screens
 
     return SettingsScreen(title: "Einstellungen", children: [

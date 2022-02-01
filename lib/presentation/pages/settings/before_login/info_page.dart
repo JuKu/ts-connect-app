@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_settings_screens/flutter_settings_screens.dart';
+//import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 class InfoActivity extends StatefulWidget {
@@ -83,7 +84,7 @@ class _InfoActivityState extends State<InfoActivity> {
                 _infoTile('App version', _packageInfo.version),
                 _infoTile('Build number', _packageInfo.buildNumber),
                 _infoTile('Build signature', _packageInfo.buildSignature),
-                if (Settings.getValue("developer-options", false) == true)_infoTile('Firebase Messaging Token', _firebaseRegisterToken),
+                if (Settings.getValue("developer-options", false) == true) _infoTile('Firebase Messaging Token', _firebaseRegisterToken),
               ],
             ),
           ]),
