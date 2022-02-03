@@ -16,18 +16,17 @@ class LoginActivity extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("TenSing Connect"),
-          centerTitle: true,
-          leading: const Icon(Icons.home),
-          actions: [
-            /*IconButton(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("TenSing Connect"),
+        centerTitle: true,
+        leading: const Icon(Icons.home),
+        actions: [
+          /*IconButton(
               onPressed: () {},
               icon: const Icon(Icons.call),
             ),*/
-            /*IconButton(
+          /*IconButton(
               onPressed: () {
                 Navigator.push(
                     context,
@@ -36,93 +35,92 @@ class LoginActivity extends StatelessWidget {
               },
               icon: const Icon(Icons.more_vert),
             ),*/
-            PopupMenuButton(
-                elevation: 40,
-                onSelected: (value) {
-                  switch (value) {
-                    case 1:
-                      //settings page
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const GlobalSettingsWidget()));
-                      break;
-                    case 2:
-                      //privacy page
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const PrivacyDataActivity()));
-                      break;
-                    case 3:
-                      //info page
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const InfoActivity()));
-                      break;
-                    case 4:
-                    //imprint page
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const ImprintActivity()));
-                      break;
-                  }
-                },
-                itemBuilder: (context) => [
-                      const PopupMenuItem(
-                        child: Text("Einstellungen"),
-                        value: 1,
-                      ),
-                      const PopupMenuItem(
-                        child: Text("Datenschutz"),
-                        value: 2,
-                      ),
-                      const PopupMenuItem(
-                        child: Text("Info"),
-                        value: 3,
-                      ),
-                      const PopupMenuItem(
-                        child: Text("Imprint"),
-                        value: 4,
-                      )
-                    ])
-          ],
-        ),
-        body: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
-          child: Column(
-            children: [
-              const SizedBox(height: 40),
-              /*const CircleAvatar(
+          PopupMenuButton(
+              elevation: 40,
+              onSelected: (value) {
+                switch (value) {
+                  case 1:
+                  //settings page
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                            const GlobalSettingsWidget()));
+                    break;
+                  case 2:
+                  //privacy page
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                            const PrivacyDataActivity()));
+                    break;
+                  case 3:
+                  //info page
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const InfoActivity()));
+                    break;
+                  case 4:
+                  //imprint page
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ImprintActivity()));
+                    break;
+                }
+              },
+              itemBuilder: (context) => [
+                const PopupMenuItem(
+                  child: Text("Einstellungen"),
+                  value: 1,
+                ),
+                const PopupMenuItem(
+                  child: Text("Datenschutz"),
+                  value: 2,
+                ),
+                const PopupMenuItem(
+                  child: Text("Info"),
+                  value: 3,
+                ),
+                const PopupMenuItem(
+                  child: Text("Imprint"),
+                  value: 4,
+                )
+              ])
+        ],
+      ),
+      body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: Column(
+          children: [
+            const SizedBox(height: 40),
+            /*const CircleAvatar(
               radius: 60,
               backgroundImage: AssetImage("assets/logo/Logo_512.png"),
             ),*/
-              const LogoWidget(width: 150, height: 150),
-              const SizedBox(height: 40),
-              LoginFormWidget()
-            ],
-          ),
+            const LogoWidget(width: 150, height: 150),
+            const SizedBox(height: 40),
+            LoginFormWidget()
+          ],
         ),
-        /*const Center(
+      ),
+      /*const Center(
           child: Text("test"),
         ),*/
-        backgroundColor: Theme.of(context).primaryColor,
-        bottomNavigationBar: const SizedBox(
-          height: 50.0,
-          //color: Colors.white70,
-          child: Center(
-              child: Text(
-            "Copyright ©2022, All Rights Reserved.\nPowered by JuKuSoft\n",
-            style: TextStyle(
-                fontWeight: FontWeight.w300,
-                fontSize: 12.0,
-                color: /*Color(0xFF162A49)*/ Colors.white60),
-          )),
-        ),
+      backgroundColor: Theme.of(context).primaryColor,
+      bottomNavigationBar: const SizedBox(
+        height: 50.0,
+        //color: Colors.white70,
+        child: Center(
+            child: Text(
+              "Copyright ©2022, All Rights Reserved.\nPowered by JuKuSoft\n",
+              style: TextStyle(
+                  fontWeight: FontWeight.w300,
+                  fontSize: 12.0,
+                  color: /*Color(0xFF162A49)*/ Colors.white60),
+            )),
       ),
     );
   }

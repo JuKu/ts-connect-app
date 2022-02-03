@@ -1,0 +1,10 @@
+{
+    "helloWorld": "Hello World!",
+    "@helloWorld": {
+      "description": "The conventional newborn programmer greeting"
+    },
+    "accept": "Accept",
+    "@accept": {
+        "description": "The accept button text e.q. for terms of service"
+    }
+}
