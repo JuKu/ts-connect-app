@@ -22,4 +22,8 @@ class ServerSettings {
     return getServerUrl() + "imprint.html";
   }
 
+  static String getTermsOfServiceUrl() {
+    return getServerUrl() + "terms-of-service.html";
+  }
+
 }

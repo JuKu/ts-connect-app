@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ts_connect_app/presentation/pages/settings/before_login/terms_of_service.dart';
 import 'package:ts_connect_app/presentation/root/rootwidget.dart';
 
 class LoginFormWidget extends StatelessWidget {
@@ -76,7 +77,7 @@ class LoginFormWidget extends StatelessWidget {
                         //simulate login
 
                         //TODO: replace later with real login
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const RootWidget()));
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const TermsOfServiceActivity()));
                       },
                       child: const Text('Anmelden'),
                     ),
