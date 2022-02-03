@@ -66,6 +66,11 @@ class DrawerMenuWidget extends StatelessWidget {
               // ...
             },
           ),
+          SizedBox(
+              height: 2,
+              child: DecoratedBox(
+                  decoration:
+                      BoxDecoration(color: Theme.of(context).primaryColor))),
           ListTile(
             leading: const Icon(Icons.admin_panel_settings),
             title: const Text('Admin'),
@@ -82,6 +87,11 @@ class DrawerMenuWidget extends StatelessWidget {
               // ...
             },
           ),
+          SizedBox(
+              height: 2,
+              child: DecoratedBox(
+                  decoration:
+                  BoxDecoration(color: Theme.of(context).primaryColor))),
           ListTile(
             leading: const Icon(Icons.privacy_tip),
             title: const Text('Datenschutz'),
@@ -98,6 +108,12 @@ class DrawerMenuWidget extends StatelessWidget {
               // ...
             },
           ),
+          const SizedBox(height: 20),
+          SizedBox(
+              height: 2,
+              child: DecoratedBox(
+                  decoration:
+                      BoxDecoration(color: Theme.of(context).primaryColor))),
           ListTile(
             leading: const Icon(Icons.logout),
             title: const Text('Logout'),
