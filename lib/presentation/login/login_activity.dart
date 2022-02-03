@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ts_connect_app/presentation/login/widgets/login_form.dart';
 import 'package:ts_connect_app/presentation/pages/settings/before_login/global_settings.dart';
+import 'package:ts_connect_app/presentation/pages/settings/before_login/imprint.dart';
 import 'package:ts_connect_app/presentation/pages/settings/before_login/info_page.dart';
 import 'package:ts_connect_app/presentation/pages/settings/before_login/privacy_data.dart';
 import 'package:ts_connect_app/presentation/shared/logo.dart';
@@ -58,10 +59,16 @@ class LoginActivity extends StatelessWidget {
                     case 3:
                       //info page
                       Navigator.push(
-                        context,
+                          context,
                           MaterialPageRoute(
-                              builder: (context) =>
-                              const InfoActivity()));
+                              builder: (context) => const InfoActivity()));
+                      break;
+                    case 4:
+                    //imprint page
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ImprintActivity()));
                       break;
                   }
                 },
@@ -77,6 +84,10 @@ class LoginActivity extends StatelessWidget {
                       const PopupMenuItem(
                         child: Text("Info"),
                         value: 3,
+                      ),
+                      const PopupMenuItem(
+                        child: Text("Imprint"),
+                        value: 4,
                       )
                     ])
           ],
