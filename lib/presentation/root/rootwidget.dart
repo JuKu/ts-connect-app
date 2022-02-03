@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ts_connect_app/presentation/menu/drawer-menu.dart';
 import 'package:ts_connect_app/presentation/pages/messages/messages.dart';
 import 'package:ts_connect_app/presentation/pages/settings/before_login/global_settings.dart';
 import 'package:ts_connect_app/presentation/pages/wip/wip.dart';
@@ -12,10 +13,12 @@ class RootWidget extends StatefulWidget {
 
 class _State extends State<RootWidget> {
   int _currentIndex = 0;
+  final _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       appBar: AppBar(
         title: const Text("TenSing Connect"),
         centerTitle: true,
@@ -37,15 +40,18 @@ class _State extends State<RootWidget> {
             ),*/
           IconButton(
             onPressed: () {
-              Navigator.push(
+              /*Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const GlobalSettingsWidget()));
+                      builder: (context) => const GlobalSettingsWidget()));*/
+
+              _scaffoldKey.currentState!.openEndDrawer();
             },
-            icon: const Icon(Icons.more_vert),
+            icon: const Icon(Icons.menu),
           ),
         ],
       ),
+      endDrawer: const DrawerMenuWidget(),
       body: IndexedStack(
         index: _currentIndex,
         children: const [
