@@ -6,5 +6,33 @@
     "accept": "Accept",
     "@accept": {
         "description": "The accept button text e.q. for terms of service"
+    },
+    "imprint_title": "Imprint",
+    "@imprint_title": {
+        "description": "The activity title for the imprint activity"
+    },
+    "settings_title": "Settings",
+    "@settings_title": {
+        "description": "The title of the settings activity"
+    },
+    "data_privacy_title": "Data Privacy",
+    "@data_privacy_title": {
+        "description": "The title of the data privacy activity"
+    },
+    "info_title": "Info",
+    "@info_title": {
+        "description": "The title of the app info activity"
+    },
+    "login_button": "Login",
+    "@login_button": {
+        "description": "The title of the login button on the login activity"
+    },
+    "username_label": "Username",
+    "@username_label": {
+        "@description": "The label for the username text field on the login activity"
+    },
+    "password_label": "Password",
+    "@password_label": {
+        "description": "The label for the password text field on the login activity"
     }
 }

@@ -1,4 +1,11 @@
 {
     "helloWorld": "¡Hola Mundo!",
-    "accept": "Akzeptieren"
+    "accept": "Akzeptieren",
+    "imprint_title": "Impressum",
+    "settings_title": "Einstellungen",
+    "data_privacy_title": "Datenschutz",
+    "info_title": "Info",
+    "login_button": "Anmelden",
+    "username_label": "Username",
+    "password_label": "Password"
 }

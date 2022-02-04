@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ts_connect_app/presentation/pages/settings/before_login/terms_of_service.dart';
 import 'package:ts_connect_app/presentation/root/rootwidget.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LoginFormWidget extends StatelessWidget {
   LoginFormWidget({Key? key}) : super(key: key);
@@ -34,19 +35,21 @@ class LoginFormWidget extends StatelessWidget {
               //const Text("Benutzername:", style: TextStyle(fontSize: 22), ),
               const SizedBox(height: 20),
               TextField(
-                controller: _usernameController,
-                  obscureText: false, decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Benutzername',
-              )),
+                  controller: _usernameController,
+                  obscureText: false,
+                  decoration: InputDecoration(
+                    border: const OutlineInputBorder(),
+                    labelText: AppLocalizations.of(context)!.username_label,
+                  )),
               const SizedBox(height: 20),
               //const Text("Passwort:", style: TextStyle(fontSize: 22), ),
               TextField(
-                controller: _passwordController,
-                  obscureText: true, decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Passwort',
-              )),
+                  controller: _passwordController,
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    border: const OutlineInputBorder(),
+                    labelText: AppLocalizations.of(context)!.password_label,
+                  )),
               const SizedBox(height: 40),
               ClipRRect(
                 borderRadius: BorderRadius.circular(4),
@@ -69,7 +72,8 @@ class LoginFormWidget extends StatelessWidget {
                     ),
                     TextButton(
                       style: TextButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 80.0),
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 16.0, horizontal: 80.0),
                         primary: Colors.white,
                         textStyle: const TextStyle(fontSize: 20),
                       ),
@@ -77,9 +81,13 @@ class LoginFormWidget extends StatelessWidget {
                         //simulate login
 
                         //TODO: replace later with real login
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const TermsOfServiceActivity()));
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const TermsOfServiceActivity()));
                       },
-                      child: const Text('Anmelden'),
+                      child: Text(AppLocalizations.of(context)!.login_button),
                     ),
                   ],
                 ),

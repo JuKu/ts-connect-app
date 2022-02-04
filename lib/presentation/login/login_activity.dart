@@ -5,6 +5,7 @@ import 'package:ts_connect_app/presentation/pages/settings/before_login/imprint.
 import 'package:ts_connect_app/presentation/pages/settings/before_login/info_page.dart';
 import 'package:ts_connect_app/presentation/pages/settings/before_login/privacy_data.dart';
 import 'package:ts_connect_app/presentation/shared/logo.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 ///
 ///the login activity, where the user can login or register.
@@ -72,20 +73,20 @@ class LoginActivity extends StatelessWidget {
                 }
               },
               itemBuilder: (context) => [
-                const PopupMenuItem(
-                  child: Text("Einstellungen"),
+                PopupMenuItem(
+                  child: Text(AppLocalizations.of(context)!.settings_title),
                   value: 1,
                 ),
-                const PopupMenuItem(
-                  child: Text("Datenschutz"),
+                PopupMenuItem(
+                  child: Text(AppLocalizations.of(context)!.data_privacy_title),
                   value: 2,
                 ),
-                const PopupMenuItem(
-                  child: Text("Info"),
+                PopupMenuItem(
+                  child: Text(AppLocalizations.of(context)!.info_title),
                   value: 3,
                 ),
-                const PopupMenuItem(
-                  child: Text("Imprint"),
+                PopupMenuItem(
+                  child: Text(AppLocalizations.of(context)!.imprint_title),
                   value: 4,
                 )
               ])
