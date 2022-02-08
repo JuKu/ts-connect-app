@@ -7,5 +7,7 @@
     "info_title": "Info",
     "login_button": "Anmelden",
     "username_label": "Username",
-    "password_label": "Password"
+    "password_label": "Password",
+    "my_profile": "Mein Profile",
+    "notes_menu": "Notizen"
 }

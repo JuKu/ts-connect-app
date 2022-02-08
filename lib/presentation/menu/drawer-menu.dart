@@ -29,7 +29,7 @@ class DrawerMenuWidget extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.person),
-            title: const Text('Profil'),
+            title: Text(AppLocalizations.of(context)!.my_profile),
             onTap: () {
               // Update the state of the app.
               // ...
@@ -37,7 +37,7 @@ class DrawerMenuWidget extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.note),
-            title: const Text('Notizen'),
+            title: Text(AppLocalizations.of(context)!.notes_menu),
             onTap: () {
               // Update the state of the app.
               // ...

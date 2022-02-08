@@ -34,5 +34,13 @@
     "password_label": "Password",
     "@password_label": {
         "description": "The label for the password text field on the login activity"
+    },
+    "my_profile": "My Profile",
+    "@my_profile": {
+        "description": "My profile menu entry"
+    },
+    "notes_menu": "Notes",
+    "@notes_menu": {
+        "description": "Menu entry for notes"
     }
 }
