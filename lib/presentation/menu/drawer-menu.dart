@@ -45,7 +45,7 @@ class DrawerMenuWidget extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.account_box),
-            title: const Text('Kontoeinstellungen'),
+            title: Text(AppLocalizations.of(context)!.account_settings_menu),
             onTap: () {
               // Update the state of the app.
               // ...
@@ -95,7 +95,7 @@ class DrawerMenuWidget extends StatelessWidget {
                   BoxDecoration(color: Theme.of(context).primaryColor))),
           ListTile(
             leading: const Icon(Icons.privacy_tip),
-            title: const Text('Datenschutz'),
+            title: Text(AppLocalizations.of(context)!.data_privacy_title),
             onTap: () {
               // Update the state of the app.
               // ...
@@ -103,7 +103,7 @@ class DrawerMenuWidget extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.import_contacts_rounded),
-            title: const Text('Impressum'),
+            title: Text(AppLocalizations.of(context)!.imprint_title),
             onTap: () {
               // Update the state of the app.
               // ...

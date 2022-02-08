@@ -42,5 +42,13 @@
     "notes_menu": "Notes",
     "@notes_menu": {
         "description": "Menu entry for notes"
+    },
+    "account_settings_menu": "Account Settings",
+    "@account_settings_menu": {
+        "description": "Menu title for account settings"
+    },
+    "logout_menu": "Logout",
+    "@logout_menu": {
+        "description": "Menu title for the logout"
     }
 }

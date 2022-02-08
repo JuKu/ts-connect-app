@@ -8,6 +8,8 @@
     "login_button": "Anmelden",
     "username_label": "Username",
     "password_label": "Password",
-    "my_profile": "Mein Profile",
-    "notes_menu": "Notizen"
+    "my_profile": "Mein Profil",
+    "notes_menu": "Notizen",
+    "account_settings_menu": "Kontoeinstellungen",
+    "logout_menu": "Abmelden"
 }
