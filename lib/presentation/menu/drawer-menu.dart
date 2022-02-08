@@ -117,7 +117,7 @@ class DrawerMenuWidget extends StatelessWidget {
                       BoxDecoration(color: Theme.of(context).primaryColor))),
           ListTile(
             leading: const Icon(Icons.logout),
-            title: const Text('Logout'),
+            title: Text(AppLocalizations.of(context)!.logout_menu),
             onTap: () {
               // Update the state of the app.
               // ...
