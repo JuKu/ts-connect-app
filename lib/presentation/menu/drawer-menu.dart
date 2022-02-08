@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ts_connect_app/presentation/shared/logo.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DrawerMenuWidget extends StatelessWidget {
   const DrawerMenuWidget({Key? key}) : super(key: key);
