@@ -15,15 +15,15 @@ class ServerSettings {
   }
 
   static String getDataPrivacyUrl() {
-    return getServerUrl() + "data-privacy.html";
+    return getServerUrl() + "public/data-privacy.html";
   }
 
   static String getImprintUrl() {
-    return getServerUrl() + "imprint.html";
+    return getServerUrl() + "public/imprint.html";
   }
 
   static String getTermsOfServiceUrl() {
-    return getServerUrl() + "terms-of-service.html";
+    return getServerUrl() + "public/terms-of-service.html";
   }
 
 }
