@@ -1,6 +1,6 @@
 ---
 created: 2022-02-15T23:32:04+01:00
-modified: 2022-02-15T23:43:00+01:00
+modified: 2022-02-15T23:43:15+01:00
 ---
 
 # 16_Risikomanagement
@@ -70,7 +70,7 @@ Reaktion:
   - Nutzer verärgert
   - evtl. Nutzerverlust
   - Betreiber verunsichert
-  - 
+
 Eintrittswahrscheinlichkeit: Niedrig
 Schadenshöhe: Sehr Hoch
 --> Risikopriorität: Hoch
