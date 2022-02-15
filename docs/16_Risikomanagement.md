@@ -1,6 +1,6 @@
 ---
 created: 2022-02-15T23:32:04+01:00
-modified: 2022-02-15T23:44:51+01:00
+modified: 2022-02-15T23:47:04+01:00
 ---
 
 # 16_Risikomanagement
@@ -14,12 +14,21 @@ modified: 2022-02-15T23:44:51+01:00
 
 Evtl. Reaktionen:
   - Abspecken der App
+  - Weniger Tests
+  - Releasedatum anpassen
+
+Effekt:
+  -
+
+Eintrittswahrscheinlichkeit: Hoch
+Schadenshöhe: Gering
+--> Risikopriorität: Mittel
 
 ### 1.2 Es finden sich nicht genug Tester
 
 ### 1.3 Apple Developer Gebühr
 
-### 1.4 Projekt ist "nicht gewollt"
+### 1.4 Projekt ist "nicht gewollt" / Es finden sich nicht genug Unterstützer
 
 ## 2 Managementrisiken
 
@@ -30,6 +39,8 @@ Evtl. Reaktionen:
 ### 3.1 Entwickler springen vom Projekt ab
 
 ### 3.2 Motivation der Entwickler hält nicht an
+
+### 3.3 Nutzer sind von App nicht begeistert / erfüllt nicht deren Anforderungen
 
 ## 4 Laufzeitrisiken
 
