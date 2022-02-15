@@ -1,6 +1,6 @@
 ---
 created: 2022-02-15T23:32:04+01:00
-modified: 2022-02-15T23:49:50+01:00
+modified: 2022-02-15T23:50:50+01:00
 ---
 
 # 16_Risikomanagement
@@ -97,13 +97,14 @@ Eintrittswahrscheinlichkeit: Niedrig
 Schadenshöhe: Sehr Hoch
 --> Risikopriorität: Hoch
 
-### 4.4 Backend skaliert nicht
+### 4.4 Backend skaliert nicht (Server ständig ausgelastet)
 
 Mögliche Reaktionen:
   - Auslagern in Cloud
   - Mehr Server mieten
+  - Klare Kommunikation in anderen sozialen Medien, dass bereits an Problem gearbeitet wird
 
 Effekt:
   - Betriebskosten steigen
-  - Nutzer sind von nicht-Funktionalität der App frustriert und deinstallieren sie irgendwann
+  - Nutzer sind von Nicht-Funktionalität der App frustriert und deinstallieren sie irgendwann
   - Verzögerung (bis weiterer Server eingerichtet und Cluster hergestellt ist)
