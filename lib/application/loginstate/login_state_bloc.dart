@@ -1,10 +1,9 @@
-import 'dart:async';
-
 import 'package:bloc/bloc.dart';
 import 'package:flutter/foundation.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
-import 'package:meta/meta.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:ts_connect_app/domain/entities/login_response_entity.dart';
+import 'package:ts_connect_app/domain/usecases/login_usecases.dart';
 
 part 'login_state_event.dart';
 
@@ -20,21 +19,36 @@ class LoginStateBloc extends Bloc<LoginStateEvent, LoginStateState> {
       return checkLoginState(event, emit);
     });
 
+    on<TryToLoginEvent>((event, emit) async {
+      emit.call(TryToLoginState());
+
+      LoginResponseEntity? res = await LoginUseCases().tryToLogin(
+          event.getUsername, event.getPassword);
+
+      bool loggedIn = res != null;
+
+      if (loggedIn) {
+        emit.call(LoggedInState());
+      } else {
+        emit.call(NotLoggedInState(errorMessage: "User Credentials wrong"));
+      }
+    });
+
     on<LogoutEvent>((event, emit) async {
-      // get preferences
-      SharedPreferences prefs = await SharedPreferences.getInstance();
+    // get preferences
+    SharedPreferences prefs = await SharedPreferences.getInstance();
 
-      // remove JWT token from shared preferences
-      prefs.remove("jwtToken");
+    // remove JWT token from shared preferences
+    prefs.remove("jwtToken");
 
-      // TODO: cleanup cache
+    // TODO: cleanup cache
 
-      return emit.call(NotLoggedInState());
+    return emit.call(NotLoggedInState(errorMessage: ""));
     });
   }
 
-  void checkLoginState(
-      LoginStateEvent event, Emitter<LoginStateState> emit) async {
+  void checkLoginState(LoginStateEvent event,
+      Emitter<LoginStateState> emit) async {
     if (kDebugMode) {
       print("check login state");
     }
@@ -45,7 +59,7 @@ class LoginStateBloc extends Bloc<LoginStateEvent, LoginStateState> {
     // check, if the jwt token exists
     if (!prefs.containsKey("jwtToken")) {
       //user is not logged in
-      return emit.call(NotLoggedInState());
+      return emit.call(NotLoggedInState(errorMessage: ""));
     }
 
     final jwtToken = prefs.getString("jwtToken")!;
@@ -54,7 +68,7 @@ class LoginStateBloc extends Bloc<LoginStateEvent, LoginStateState> {
     bool hasExpired = JwtDecoder.isExpired(jwtToken);
 
     if (hasExpired) {
-      return emit.call(NotLoggedInState());
+      return emit.call(NotLoggedInState(errorMessage: ""));
     }
 
     // get expiration date
