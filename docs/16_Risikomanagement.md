@@ -1,6 +1,6 @@
 ---
 created: 2022-02-15T23:32:04+01:00
-modified: 2022-02-15T23:55:27+01:00
+modified: 2022-02-15T23:56:49+01:00
 ---
 
 # 16_Risikomanagement
@@ -97,12 +97,13 @@ Schadenshöhe: Hoch
 Effekt:
   - Nutzerdaten weg
   - Datenleak
-
-Reaktion:
-  - Meldung
   - Nutzer verärgert
   - evtl. Nutzerverlust
   - Betreiber verunsichert
+
+Reaktion:
+  - Meldung
+  - vorher: Server gut absichern (OWASP Top 10)
 
 Eintrittswahrscheinlichkeit: Niedrig
 Schadenshöhe: Sehr Hoch
