@@ -1,6 +1,6 @@
 ---
 created: 2022-02-15T23:32:04+01:00
-modified: 2022-02-15T23:38:46+01:00
+modified: 2022-02-15T23:43:00+01:00
 ---
 
 # 16_Risikomanagement
@@ -10,6 +10,9 @@ Merkmale --> Ereignis --> Reaktion --> Effekt.
 ## 1 Entwicklungsrisiken
 
 ### 1.1 Aufwand / Komplexität unterschätzt
+
+Evtl. Reaktionen:
+  - Abspecken der App
 
 ### 1.2 Es finden sich nicht genug Tester
 
@@ -24,6 +27,8 @@ Merkmale --> Ereignis --> Reaktion --> Effekt.
 ## 3 Soziale Risiken 
 
 ### 3.1 Entwickler springen vom Projekt ab
+
+### 3.2 Motivation der Entwickler hält nicht an
 
 ## 4 Laufzeitrisiken
 
@@ -54,7 +59,7 @@ Eintrittswahrscheinlichkeit: Mittel
 Schadenshöhe: Hoch
 --> Risikopriorität: Hoch
 
-### Server wird gehackt
+### 4.3 Server wird gehackt
 
 Effekt:
   - Nutzerdaten weg
@@ -69,3 +74,14 @@ Reaktion:
 Eintrittswahrscheinlichkeit: Niedrig
 Schadenshöhe: Sehr Hoch
 --> Risikopriorität: Hoch
+
+### 4.4 Backend skaliert nicht
+
+Mögliche Reaktionen:
+  - Auslagern in Cloud
+  - Mehr Server mieten
+
+Effekt:
+  - Betriebskosten steigen
+  - Nutzer sind von nicht-Funktionalität der App frustriert und deinstallieren sie irgendwann
+  - Verzögerung (bis weiterer Server eingerichtet und Cluster hergestellt ist)
