@@ -24,17 +24,17 @@ class LoginStateBloc extends Bloc<LoginStateEvent, LoginStateState> {
     on<TryToLoginEvent>((event, emit) async {
       emit.call(TryToLoginState());
 
-      Either<Failure,LoginResponseEntity> res = await LoginUseCases().tryToLogin(
+      Either<LoginFailure,LoginResponseEntity> res = await LoginUseCases().tryToLogin(
           event.getUsername, event.getPassword);
 
       bool loggedIn = res.isRight();
 
-      if (loggedIn) {
-        emit.call(LoggedInState());
-      } else {
-        res.foldLeft(z, (previous, r) => null)
-        emit.call(NotLoggedInState(errorMessage: "User Credentials wrong"));
-      }
+      LoginStateState newState = res.fold(
+              (failure) => LoginCheckErrorState(failure: failure),
+              (entity) => LoggedInState()
+      );
+
+      emit.call(newState);
     });
 
     on<LogoutEvent>((event, emit) async {

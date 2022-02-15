@@ -34,7 +34,7 @@ class LoginUseCases {
     return true;
   }
 
-  Future<Either<Failure,LoginResponseEntity>> tryToLogin(String username, String password) async {
+  Future<Either<LoginFailure,LoginResponseEntity>> tryToLogin(String username, String password) async {
     // TODO: add code here
 
     // get shared preferences
