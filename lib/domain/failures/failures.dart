@@ -11,3 +11,7 @@ class UnauthorizedError extends Failure {}
 /// This means, that the user does not have the role or permission to access
 /// this API.
 class PermissionNotGrantedError extends Failure {}
+
+/// This error is fired, if the server is currently in maintenance mode.
+/// So we should print a message in UI "please try in 5 minutes again".
+class MaintenanceError extends Failure {}
