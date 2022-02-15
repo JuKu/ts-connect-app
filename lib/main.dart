@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_settings_screens/flutter_settings_screens.dart';
+import 'package:ts_connect_app/application/loginstate/login_state_bloc.dart';
 import 'package:ts_connect_app/presentation/login/login_activity.dart';
 import 'package:ts_connect_app/presentation/pages/settings/before_login/global_settings.dart';
 import 'package:ts_connect_app/presentation/root/rootwidget.dart';
@@ -52,20 +54,25 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: const LoginActivity(),
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: AppLocalizations.supportedLocales,
-      /*debugShowCheckedModeBanner: false,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<LoginStateBloc>(
+            create: (BuildContext context) => LoginStateBloc())
+      ],
+      child: MaterialApp(
+        home: const LoginActivity(),
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
+        /*debugShowCheckedModeBanner: false,
       debugShowMaterialGrid: false,*/
-      routes: <String, WidgetBuilder>{
-        "/app/home" : (BuildContext context) => const RootWidget(),
-        "/settings" : (BuildContext context) => const GlobalSettingsWidget(),
-      },
+        routes: <String, WidgetBuilder>{
+          "/app/home": (BuildContext context) => const RootWidget(),
+          "/settings": (BuildContext context) => const GlobalSettingsWidget(),
+        },
+      ),
     );
   }
 }
-
 
 /*class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
