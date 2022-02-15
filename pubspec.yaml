@@ -58,6 +58,7 @@ dependencies:
   bloc: ^8.0.2
   flutter_bloc: ^8.0.1
   shared_preferences: ^2.0.13
+  jwt_decoder: ^2.0.1
 
   #settings_ui: ^2.0.1
 
