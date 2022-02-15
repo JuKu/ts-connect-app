@@ -1,6 +1,6 @@
 ---
 created: 2022-02-15T23:32:04+01:00
-modified: 2022-02-15T23:47:04+01:00
+modified: 2022-02-15T23:48:26+01:00
 ---
 
 # 16_Risikomanagement
@@ -18,7 +18,9 @@ Evtl. Reaktionen:
   - Releasedatum anpassen
 
 Effekt:
-  -
+  - App hat geringeren Funktionsumfang --> geringere Kundenzufriedenheit
+  - evtl. weniger Nutzer der App
+  - nicht so gute Bewertungen
 
 Eintrittswahrscheinlichkeit: Hoch
 Schadenshöhe: Gering
