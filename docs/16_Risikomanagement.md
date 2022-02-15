@@ -1,6 +1,6 @@
 ---
 created: 2022-02-15T23:32:04+01:00
-modified: 2022-02-15T23:50:50+01:00
+modified: 2022-02-15T23:55:27+01:00
 ---
 
 # 16_Risikomanagement
@@ -36,7 +36,18 @@ Effekt:
   - Projekt verzögert sich
   - Personelle Ressourcen sind erforderlich, um potentielle Tester zu motivieren
 
-### 1.3 Apple Developer Gebühr
+### 1.3 Apple Developer Gebühr (120€)
+
+Reaktion:
+  - Sponsor suchen
+  - temporär: App nur für Android und als WebApp deployen (Nutzer müssten App im Browser aufrufen)
+  - temporär: App auf anderem Wege zum Download anbieten
+
+Effekt:
+  - Projekt verzögert sich
+  - falls Android & Web: Motivation der iOS Nutzer, App zu nutzen, sinkt drastisch
+  - falls Download: Installation von "Nicht-Vertrauenswürdigen Apps" ist komplizierter --> Nutzer benötigen höhere Motivation / Anleitung, um sich da durch zu fitten
+  - falls Download: Updates schwierig --> Hinzufügen neuer Funktionen schwierig umsetzbar, Abwärtskompatibilität muss sehr lange eingehalten werden --> Entwicklung verzögert sich deutlich (deutlich mehr Aufwand und Regressionstests nötig)
 
 ### 1.4 Projekt ist "nicht gewollt" / Es finden sich nicht genug Unterstützer
 
