@@ -1,6 +1,6 @@
 ---
 created: 2022-02-15T23:32:04+01:00
-modified: 2022-02-15T23:56:49+01:00
+modified: 2022-02-15T23:57:50+01:00
 ---
 
 # 16_Risikomanagement
@@ -35,6 +35,11 @@ Effekt:
   - Qualität sinkt, falls nicht genug Tester vorhanden
   - Projekt verzögert sich
   - Personelle Ressourcen sind erforderlich, um potentielle Tester zu motivieren
+  - Verzögerung kann dazu führen, dass Entwickler weniger motiviert sind
+
+Eintrittswahrscheinlichkeit: Hoch
+Schadenshöhe: Mittel
+--> Risikopriorität: Mittel
 
 ### 1.3 Apple Developer Gebühr (120€)
 
