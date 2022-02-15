@@ -1,6 +1,6 @@
 ---
 created: 2022-02-15T23:32:04+01:00
-modified: 2022-02-15T23:48:26+01:00
+modified: 2022-02-15T23:49:50+01:00
 ---
 
 # 16_Risikomanagement
@@ -27,6 +27,14 @@ Schadenshöhe: Gering
 --> Risikopriorität: Mittel
 
 ### 1.2 Es finden sich nicht genug Tester
+
+Reaktion:
+  - aktiv Leute als Tester akquirieren
+
+Effekt:
+  - Qualität sinkt, falls nicht genug Tester vorhanden
+  - Projekt verzögert sich
+  - Personelle Ressourcen sind erforderlich, um potentielle Tester zu motivieren
 
 ### 1.3 Apple Developer Gebühr
 
