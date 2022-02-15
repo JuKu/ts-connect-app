@@ -1,11 +1,12 @@
 ---
 created: 2022-02-15T23:32:04+01:00
-modified: 2022-02-15T23:43:15+01:00
+modified: 2022-02-15T23:44:51+01:00
 ---
 
 # 16_Risikomanagement
 
-Merkmale --> Ereignis --> Reaktion --> Effekt.
+**Merkmale** --> **Ereignis** --> **Reaktion** --> **Effekt**.
+
 
 ## 1 Entwicklungsrisiken
 
