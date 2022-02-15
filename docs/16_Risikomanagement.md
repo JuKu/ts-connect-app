@@ -1,6 +1,6 @@
 ---
 created: 2022-02-15T23:32:04+01:00
-modified: 2022-02-15T23:58:31+01:00
+modified: 2022-02-16T00:03:37+01:00
 ---
 
 # 16_Risikomanagement
@@ -54,11 +54,39 @@ Effekt:
   - falls Download: Installation von "Nicht-Vertrauenswürdigen Apps" ist komplizierter --> Nutzer benötigen höhere Motivation / Anleitung, um sich da durch zu fitten
   - falls Download: Updates schwierig --> Hinzufügen neuer Funktionen schwierig umsetzbar, Abwärtskompatibilität muss sehr lange eingehalten werden --> Entwicklung verzögert sich deutlich (deutlich mehr Aufwand und Regressionstests nötig)
 
+Eintrittswahrscheinlichkeit: Niedrig\
+Schadenshöhe: Mittel\
+--> Risikopriorität: Niedrig
+
 ### 1.4 Projekt ist "nicht gewollt" / Es finden sich nicht genug Unterstützer
+
+Reaktion:
+  - Einstellung des Projektes
+  - evtl. andere Idee umsetzen
+
+Effekt:
+  - App wird nicht realisiert
+  - Verzögerung, falls andere Idee
+
+Eintrittswahrscheinlichkeit: Niedrig\
+Schadenshöhe: Niedrig\
+--> Risikopriorität: Niedrig
 
 ## 2 Managementrisiken
 
 ### 2.1 Feedbackschleife zu lang
+
+Reaktion:
+  - besseres Vorgehensmodell entwerfen & beschließen
+  - Kleineres Gremium bilden, dass für App Planung & Controlling zuständig ist
+
+Effekt:
+  - Projekt verzögert sich
+  - Entwickler evtl. weniger motiviert
+
+Eintrittswahrscheinlichkeit: Mittel-Hoch\
+Schadenshöhe: Mittel\
+--> Risikopriorität: Mittel
 
 ## 3 Soziale Risiken 
 
