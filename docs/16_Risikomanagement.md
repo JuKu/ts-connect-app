@@ -1,6 +1,6 @@
 ---
 created: 2022-02-15T23:32:04+01:00
-modified: 2022-02-15T23:32:04+01:00
+modified: 2022-02-15T23:38:46+01:00
 ---
 
 # 16_Risikomanagement
@@ -40,7 +40,7 @@ Eintrittswahrscheinlichkeit: Hoch
 Schadenshöhe: Gering
 --> Risikopriorität: Gering
 
-### 4.2 Server verliert alle Daten
+### 4.2 Server verliert (alle) Daten
 
 Effekt:
   - Komplette Nutzerbasis weg
@@ -48,5 +48,24 @@ Effekt:
 
 Reaktion:
   - Datenbank neu aufsetzen
+  - vorher: regelmäßige Backups
 
-### Server wird gehackt-15T23
+Eintrittswahrscheinlichkeit: Mittel
+Schadenshöhe: Hoch
+--> Risikopriorität: Hoch
+
+### Server wird gehackt
+
+Effekt:
+  - Nutzerdaten weg
+  - Datenleak
+
+Reaktion:
+  - Meldung
+  - Nutzer verärgert
+  - evtl. Nutzerverlust
+  - Betreiber verunsichert
+  - 
+Eintrittswahrscheinlichkeit: Niedrig
+Schadenshöhe: Sehr Hoch
+--> Risikopriorität: Hoch
