@@ -11,5 +11,7 @@
     "my_profile": "Mein Profil",
     "notes_menu": "Notizen",
     "account_settings_menu": "Kontoeinstellungen",
-    "logout_menu": "Abmelden"
+    "logout_menu": "Abmelden",
+    "error_maintenance_text": "Wartungsarbeiten - Der Server ist leider gerade aufgrund von Wartungsarbeiten nicht erreichbar. Bitte probiere es in 5 Minuten noch einmal.",
+    "error_wrong_credentials": "Die Zugangsdaten sind leider falsch. Probiere es noch einmal"
 }

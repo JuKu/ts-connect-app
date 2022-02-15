@@ -50,5 +50,13 @@
     "logout_menu": "Logout",
     "@logout_menu": {
         "description": "Menu title for the logout"
+    },
+    "error_maintenance_text": "Maintenance Error - The server is currently under maintenance. Please try again in some minutes",
+    "@error_maintenance_text": {
+        "description": "This text is shown e.q. in login screen, if the server is currently in maintenance mode"
+    },
+    "error_wrong_credentials": "These credentials are wrong",
+    "@error_wrong_credentials": {
+        "description": "This text is shown in login screen, if the credentials for login are wrong."
     }
 }

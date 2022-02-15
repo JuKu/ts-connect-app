@@ -1,8 +1,10 @@
 import 'package:bloc/bloc.dart';
+import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:ts_connect_app/domain/entities/login_response_entity.dart';
+import 'package:ts_connect_app/domain/failures/failures.dart';
 import 'package:ts_connect_app/domain/usecases/login_usecases.dart';
 
 part 'login_state_event.dart';
@@ -22,14 +24,15 @@ class LoginStateBloc extends Bloc<LoginStateEvent, LoginStateState> {
     on<TryToLoginEvent>((event, emit) async {
       emit.call(TryToLoginState());
 
-      LoginResponseEntity? res = await LoginUseCases().tryToLogin(
+      Either<Failure,LoginResponseEntity> res = await LoginUseCases().tryToLogin(
           event.getUsername, event.getPassword);
 
-      bool loggedIn = res != null;
+      bool loggedIn = res.isRight();
 
       if (loggedIn) {
         emit.call(LoggedInState());
       } else {
+        res.foldLeft(z, (previous, r) => null)
         emit.call(NotLoggedInState(errorMessage: "User Credentials wrong"));
       }
     });

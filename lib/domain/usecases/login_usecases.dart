@@ -1,6 +1,8 @@
+import 'package:dartz/dartz.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:ts_connect_app/domain/entities/login_response_entity.dart';
+import 'package:ts_connect_app/domain/failures/failures.dart';
 
 class LoginUseCases {
 
@@ -32,7 +34,7 @@ class LoginUseCases {
     return true;
   }
 
-  Future<LoginResponseEntity?> tryToLogin(String username, String password) async {
+  Future<Either<Failure,LoginResponseEntity>> tryToLogin(String username, String password) async {
     // TODO: add code here
 
     // get shared preferences
@@ -42,7 +44,8 @@ class LoginUseCases {
 
     // TODO: load additional data from server to cache (in background)
 
-    return null;
+    // TODO: remove this later
+    return Left(MaintenanceError());
   }
 
 }

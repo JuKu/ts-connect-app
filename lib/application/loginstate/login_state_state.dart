@@ -25,4 +25,8 @@ class NotLoggedInState extends LoginStateState {
 
 /// This state is emitted, if the app could not check, if the user is logged in,
 /// e.q. caused because network is not available
-class LoginCheckErrorState extends LoginStateState {}
+class LoginCheckErrorState extends LoginStateState {
+  final LoginFailure failure;
+
+  LoginCheckErrorState({required this.failure}) : super();
+}
