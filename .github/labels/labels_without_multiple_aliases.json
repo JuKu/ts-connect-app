@@ -1,0 +1,267 @@
+[
+	{
+		"name": "breaking",
+		"color": "d73a4a",
+		"description": "Introduces a breaking change.",
+		"aliases": [
+			"breaking change"
+		]
+	},
+	{
+		"name": "effort: 1",
+		"color": "91ca55"
+	},
+	{
+		"name": "effort: 2",
+		"color": "c2e2a2"
+	},
+	{
+		"name": "effort: 3",
+		"color": "e9f4dc"
+	},
+	{
+		"name": "effort: 5",
+		"color": "fef6d7"
+	},
+	{
+		"name": "effort: 8",
+		"color": "fef2c0"
+	},
+	{
+		"name": "effort: 13",
+		"color": "fbca04"
+	},
+	{
+		"name": "good first issue",
+		"color": "7057ff",
+		"description": "Good for newcomers.",
+		"aliases": [
+			"good-starter-issue"
+		]
+	},
+	{
+		"name": "status: help wanted",
+		"color": "0e8a16",
+		"aliases": [
+			"help"
+		]
+	},
+	{
+		"name": "priority: now",
+		"color": "d73a4a",
+		"aliases": [
+		]
+	},
+	{
+		"name": "priority: soon",
+		"color": "ffb8c6",
+		"aliases": [
+		]
+	},
+	{
+		"name": "priority: 2day",
+		"color": "fbca04",
+		"aliases": [
+		]
+	},
+	{
+		"name": "priority: low",
+		"color": "009800"
+	},
+	{
+		"name": "priority: medium",
+		"color": "fbca04"
+	},
+	{
+		"name": "priority: high",
+		"color": "eb6420"
+	},
+	{
+		"name": "priority: critical",
+		"color": "e11d21"
+	},
+	{
+		"name": "semantic-release",
+		"color": "e6e6e6"
+	},
+	{
+		"name": "state: approved",
+		"color": "91ca55",
+		"description": "Approved to proceed.",
+		"aliases": [
+			"approved"
+		]
+	},
+	{
+		"name": "state: blocked",
+		"color": "d73a4a",
+		"description": "Something is blocking action.",
+		"aliases": [
+			"blocked"
+		]
+	},
+	{
+		"name": "state: pending",
+		"color": "fbca04",
+		"description": "Taking action, but need a few things to happen first. A feature that needs dependencies merged, or a bug that needs further data.",
+		"aliases": [
+			"in progress"
+		]
+	},
+	{
+		"name": "state: inactive",
+		"color": "e6e6e6",
+		"description": "No action needed or possible. The issue is either fixed, addressed better by other issues, or just out of product scope.",
+		"aliases": [
+			"invalid"
+		]
+	},
+	{
+		"name": "status: wontfix",
+		"color": "cccccc",
+		"aliases": [
+			"wontfix"
+		]
+	},
+	{
+		"name": "status: duplicate",
+		"color": "cccccc",
+		"aliases": [
+			"duplicate"
+		]
+	},
+	{
+		"name": "type: bug",
+		"color": "d73a4a",
+		"description": "Something isn't working.",
+		"aliases": [
+			"bug"
+		]
+	},
+	{
+		"name": "type: chore",
+		"color": "fef2c0",
+		"description": "Converting measurements, reorganizing folder structure, and other necessary (but less impactful) tasks.",
+		"aliases": [
+			"chore"
+		]
+	},
+	{
+		"name": "type: discussion",
+		"color": "d4c5f9",
+		"description": "Questions, proposals and info that requires discussion.",
+		"aliases": [
+			"discussion"
+		]
+	},
+	{
+		"name": "type: documentation",
+		"color": "fef2c0",
+		"description": "Related to documentation and information.",
+		"aliases": [
+			"docs"
+		]
+	},
+	{
+		"name": "type: feature",
+		"color": "5ebeff",
+		"description": "Brand new functionality, features, pages, workflows, endpoints, etc.",
+		"aliases": [
+			"feature"
+		]
+	},
+	{
+		"name": "type: feature request",
+		"color": "5ebeff",
+		"description": "Brand new functionality, features, pages, workflows, endpoints, etc., which is planned, but not approved",
+		"aliases": [
+			"Feature Request"
+		]
+	},
+	{
+		"name": "type: enhancement",
+		"color": "5ebeff",
+		"description": "Brand new functionality, features, pages, workflows, endpoints, etc.",
+		"aliases": [
+			"enhancement"
+		]
+	},
+	{
+		"name": "type: fix",
+		"color": "91ca55",
+		"description": "Iterations on existing features or infrastructure.",
+		"aliases": [
+			"fix"
+		]
+	},
+	{
+		"name": "type: security",
+		"color": "d73a4a",
+		"description": "Something is vulnerable or not secure.",
+		"aliases": [
+			"security"
+		]
+	},
+	{
+		"name": "type: testing",
+		"color": "fbca04",
+		"description": "Related to testing.",
+		"aliases": [
+			"test"
+		]
+	},
+	{
+		"name": "type: design",
+		"color": "eb6420",
+		"aliases": [
+			"design"
+		]
+	},
+	{
+		"name": "work: chaotic",
+		"color": "fbca04",
+		"description": "The situation is chaotic, novel practices used.",
+		"aliases": [
+			"chaotic"
+		]
+	},
+	{
+		"name": "work: complex",
+		"color": "d4c5f9",
+		"description": "The situation is complex, emergent practices used.",
+		"aliases": [
+			"complex"
+		]
+	},
+	{
+		"name": "work: complicated",
+		"color": "ffb8c6",
+		"description": "The situation is complicated, good practices used.",
+		"aliases": [
+			"complicated"
+		]
+	},
+	{
+		"name": "work: obvious",
+		"color": "91ca55",
+		"description": "The situation is obvious, best practices used.",
+		"aliases": [
+			"obvious"
+		]
+	},
+	{
+		"name": "loc: backend",
+		"color": "5319e7",
+		"description": "A backend task"
+	},
+	{
+		"name": "loc: frontend",
+		"color": "67ECB2",
+		"description": "A frontend-only task"
+	},
+	{
+		"name": "loc: fullstack",
+		"color": "213888",
+		"description": "A backend and frontend task"
+	}
+]
